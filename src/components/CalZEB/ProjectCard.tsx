@@ -107,7 +107,7 @@ export default function ProjectCard({ project, onDelete }: ProjectCardProps) {
       {/* Actions */}
       <div className="flex gap-2 pt-4 border-t-2 border-gray-200">
         <Link
-          href={`/nuggets/calzeb/projects/${project.project_id}`}
+          href={`/projects/${project.project_id}`}
           className="flex-1 text-center border-2 border-red-600 text-red-600 px-4 py-2 text-sm font-bold hover:bg-red-600 hover:text-white transition-all duration-150"
         >
           열기

@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 
+const HOMEPAGE_URL = 'https://askwhy.works'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -11,44 +13,40 @@ export default function Footer() {
 
         {/* Sitemap Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {/* Column 1: Main */}
+          {/* Column 1: CalZEB */}
           <div>
             <h4 className="text-xs text-slate-400 uppercase tracking-widest mb-4 font-normal">
-              Main
+              CalZEB
             </h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Origin</Link></li>
-              <li><Link href="/layers" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Layers</Link></li>
-              <li><Link href="/nuggets" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Nuggets</Link></li>
-              <li><Link href="/publications" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Publications</Link></li>
+              <li><Link href="/" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Home</Link></li>
+              <li><Link href="/login" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Sign In</Link></li>
+              <li><Link href="/register" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Sign Up</Link></li>
             </ul>
           </div>
 
-          {/* Column 2: Tools */}
+          {/* Column 2: Tools (external links to askwhy.works) */}
           <div>
             <h4 className="text-xs text-slate-400 uppercase tracking-widest mb-4 font-normal">
               Tools
             </h4>
             <ul className="space-y-2">
-              <li><Link href="/nuggets/lm-eco2od" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Energy Calculator</Link></li>
-              <li><Link href="/nuggets/law-checker" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Law Tracker</Link></li>
-              <li><Link href="/nuggets/krri-metro" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Railway Designer</Link></li>
-              <li><Link href="/nuggets/contam-editor" className="text-xs text-slate-500 hover:text-red-600 transition-colors">CONTAM Editor</Link></li>
-              <li><Link href="/nuggets/building-ledger" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Building Ledger</Link></li>
-              <li><Link href="/nuggets/bolumicloud" className="text-xs text-slate-500 hover:text-red-600 transition-colors">BoLumiCloud</Link></li>
+              <li><a href={`${HOMEPAGE_URL}/nuggets/lm-eco2od`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Energy Calculator</a></li>
+              <li><a href={`${HOMEPAGE_URL}/nuggets/bolumicloud`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">BoLumiCloud</a></li>
+              <li><a href={`${HOMEPAGE_URL}/nuggets/law-checker`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Law Tracker</a></li>
+              <li><a href={`${HOMEPAGE_URL}/nuggets/contam-editor`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">CONTAM Editor</a></li>
             </ul>
           </div>
 
-          {/* Column 3: Projects */}
+          {/* Column 3: Research */}
           <div>
             <h4 className="text-xs text-slate-400 uppercase tracking-widest mb-4 font-normal">
-              Projects
+              Research
             </h4>
             <ul className="space-y-2">
-              <li><Link href="/layers?view=list" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Layers List View</Link></li>
-              <li><Link href="/layers?view=network" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Layers Network View</Link></li>
-              <li><Link href="/publications?view=list" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Publications List View</Link></li>
-              <li><Link href="/publications?view=network" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Publications Network View</Link></li>
+              <li><a href={`${HOMEPAGE_URL}/layers`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Layers</a></li>
+              <li><a href={`${HOMEPAGE_URL}/publications`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Publications</a></li>
+              <li><a href={`${HOMEPAGE_URL}/nuggets`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Nuggets</a></li>
             </ul>
           </div>
 
@@ -58,8 +56,9 @@ export default function Footer() {
               About
             </h4>
             <ul className="space-y-2">
-              <li><Link href="/agents" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Agents</Link></li>
-              <li><Link href="/interface" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Interface</Link></li>
+              <li><a href={HOMEPAGE_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Research Division</a></li>
+              <li><a href={`${HOMEPAGE_URL}/interface`} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">Interface</a></li>
+              <li><a href="https://api.askwhy.works/docs" target="_blank" rel="noopener noreferrer" className="text-xs text-slate-500 hover:text-red-600 transition-colors">API Docs</a></li>
             </ul>
           </div>
         </div>
@@ -100,7 +99,7 @@ export default function Footer() {
                 <p className="text-xs text-slate-600 font-normal">안승호</p>
               </div>
               <div>
-                <a 
+                <a
                   href="mailto:sha@eantec.co.kr"
                   className="text-xs text-slate-500 hover:text-slate-900 transition-colors font-normal"
                 >
@@ -108,7 +107,7 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <a 
+                <a
                   href="tel:070-4066-6812"
                   className="text-xs text-slate-500 hover:text-slate-900 transition-colors font-normal"
                 >

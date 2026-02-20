@@ -159,7 +159,7 @@ export default function ProjectDetailPage() {
               <p className="text-base font-bold text-black mb-2">오류가 발생했습니다</p>
               <p className="text-sm font-normal text-gray-700">{error}</p>
               <button
-                onClick={() => router.push('/nuggets/calzeb')}
+                onClick={() => router.push('/')}
                 className="mt-4 border-2 border-black bg-black text-white px-6 py-2 text-sm font-bold hover:bg-gray-900 transition-colors"
               >
                 ← 목록으로 돌아가기
@@ -187,7 +187,7 @@ export default function ProjectDetailPage() {
               {/* 뒤로가기 + 제목 */}
               <div className="flex items-center gap-4 mb-6">
                 <button
-                  onClick={() => router.push('/nuggets/calzeb')}
+                  onClick={() => router.push('/')}
                   className="border-2 border-gray-300 px-4 py-2 text-sm font-bold text-black hover:border-black transition-colors"
                 >
                   ← 목록
